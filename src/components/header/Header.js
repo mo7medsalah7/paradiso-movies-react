@@ -61,6 +61,11 @@ const InnerInformation = styled.div`
       }
     }
     input[type="text"] {
+      @media (min-width: 300px) and (max-width: 776px) {
+        font-size: 8px;
+        letter-spacing: 0px;
+
+      }
       width: 100%;
       display: flex;
       padding: 15px;
@@ -74,6 +79,10 @@ const InnerInformation = styled.div`
       text-transform: uppercase;
     }
     input[type="submit"] {
+      @media (min-width: 300px) and (max-width: 776px) {
+        padding: 0px 8px;
+
+      }
       display: inline-flex;
       justify-content: center;
       align-content: center;

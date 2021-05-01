@@ -57,7 +57,9 @@ const NavbarContainer = styled.div`
       button {
         border-color: rgb(255 255 255 / 10%);
         span.navbar-toggler-icon {
-          background-image: url("/assets/icons/menu.svg");
+          background-image: url("/assets/images/menu.svg");
+        }
+        .navbar-light .navbar-toggler {
         }
       }
     }
@@ -68,6 +70,9 @@ const NavbarContainer = styled.div`
         a {
           padding: 1.6rem;
           font-family: Oswald;
+          @media(min-width: 400px) and (max-width: 1090px) {
+            padding: 0px;
+          }
         }
       }
     }
