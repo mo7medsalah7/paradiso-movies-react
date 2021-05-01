@@ -33,7 +33,7 @@ function App() {
         <Route path="/users/register" component={Register} />
         <Route path="/super" component={Simp} />
       </Router>
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
     </QueryClientProvider>
   );
 }

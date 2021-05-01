@@ -403,9 +403,9 @@ export default function Simp() {
         </div>
       </NadaSection>
       <NadaSection>
-        <ReactPlayer
-           playing url={'video-1.mp4'}
-             />
+        {/* <ReactPlayer
+           playing url='video-1.mp4'
+             /> */}
       </NadaSection>
       {/* <NadaSection>
         <div className="nada-stickers">
