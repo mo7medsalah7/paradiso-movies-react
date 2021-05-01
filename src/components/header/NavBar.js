@@ -18,6 +18,10 @@ const NavbarContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, 50% 50%);
     grid-gap: 78px;
+    @media (max-width: 1090px) {
+      grid-template-columns: repeat(auto-fit,100%);
+      grid-gap: 10px;
+    }
     ul {
       justify-content: center;
       align-items: center;
@@ -31,6 +35,10 @@ const NavbarContainer = styled.div`
     padding: 48px;
     @media (max-width: 1090px) {
       grid-template-columns: repeat(auto-fit, 70% 20%);
+      ul {
+      display: grid;
+      padding: 0px;
+      }
     }
     @media (min-width: 1091px) {
       grid-template-columns: repeat(auto-fit, 30% 70%);
@@ -65,13 +73,15 @@ const NavbarContainer = styled.div`
     }
     ul {
       display: flex;
-
+      @media (max-width: 1090px) {
+            display: grid;
+          }
       li {
         a {
           padding: 1.6rem;
           font-family: Oswald;
-          @media(min-width: 400px) and (max-width: 1090px) {
-            padding: 0px;
+          @media (max-width: 1090px) {
+            padding: 0rem;
           }
         }
       }

@@ -14,6 +14,8 @@ import useFavFilms from './../../hooks/simpHooks/useFavFilms';
 import useFavSeries from './../../hooks/simpHooks/useFavSeries';
 import {Helmet} from "react-helmet";
 import Footer from "../Footer";
+import ReactPlayer from 'react-player/youtube'
+
 
 
 const HeroStyles = styled.div`
@@ -399,6 +401,11 @@ export default function Simp() {
             })}
           </MainCard>
         </div>
+      </NadaSection>
+      <NadaSection>
+        <ReactPlayer
+           playing url={'video-1.mp4'}
+             />
       </NadaSection>
       {/* <NadaSection>
         <div className="nada-stickers">
