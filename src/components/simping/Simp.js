@@ -102,6 +102,33 @@ const NadaSection = styled.div`
       margin-bottom: 20px;
     }
   }
+  .ice-break-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1%;
+    .nada-profile {
+      text-align: center;
+      margin-top: 30px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 8px;
+      }
+      .fav-quotes {
+        margin-top: 10px;
+        p {
+          @media(min-width: 991px) and (max-width: 1200px) {
+
+            /* max-width: 50%; */
+          }
+          background-color: var(--green-color);
+          color: var(--white-color);
+          margin: 0px auto 2px auto;
+        }
+      }
+    }
+  }
   .nada-fav-tubes {
     margin-top: 45px;
     .card-details {
@@ -257,6 +284,18 @@ export default function Simp() {
         </Slider>
       </HeroStyles>
       <NadaSection>
+        <div className="ice-break-section">
+          
+        <div className="nada-profile">
+          <img src="./assets/images/gravator_female.jpg" />
+          <h5>Nada Khaled</h5>
+          <p>-Copywriter/Content Creator-</p>
+          <div className="fav-quotes">
+            <p>Hala Madrid Y Nada Mas</p>
+            <p>البابلو واحد ملوش بديل</p>
+            <p>#الحل_في_الحكاية</p>
+          </div>
+        </div>
         <div className="nada-cards">
           {images.map((image) => {
             return (
@@ -269,6 +308,7 @@ export default function Simp() {
               </div>
             );
           })}
+        </div>
         </div>
       </NadaSection>
       <NadaSection>
