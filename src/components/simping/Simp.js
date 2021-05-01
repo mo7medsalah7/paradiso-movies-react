@@ -104,8 +104,12 @@ const NadaSection = styled.div`
   }
   .ice-break-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 1%;
+    @media (min-width: 501px) and (max-width: 766px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
     .nada-profile {
       text-align: center;
       margin-top: 30px;
@@ -117,14 +121,21 @@ const NadaSection = styled.div`
       }
       .fav-quotes {
         margin-top: 10px;
+        @media (min-width: 501px) and (max-width: 766px) {
+          margin-bottom: 18px;
+        }
         p {
           @media(min-width: 991px) and (max-width: 1200px) {
 
             /* max-width: 50%; */
           }
-          background-color: var(--green-color);
-          color: var(--white-color);
+         
           margin: 0px auto 2px auto;
+          span {
+            padding: 0px 8px;
+            background-color: var(--green-color);
+          color: var(--white-color);
+          }
         }
       }
     }
@@ -291,9 +302,9 @@ export default function Simp() {
           <h5>Nada Khaled</h5>
           <p>-Copywriter/Content Creator-</p>
           <div className="fav-quotes">
-            <p>Hala Madrid Y Nada Mas</p>
-            <p>البابلو واحد ملوش بديل</p>
-            <p>#الحل_في_الحكاية</p>
+            <p><span>Hala Madrid Y Nada Mas</span></p>
+            <p><span>البابلو واحد ملوش بديل</span></p>
+            <p><span>#الحل_في_الحكاية</span></p>
           </div>
         </div>
         <div className="nada-cards">
