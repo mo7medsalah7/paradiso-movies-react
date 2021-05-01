@@ -57,10 +57,22 @@ const MainCard = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 2%;
-  padding: 30px 70px;
+  padding: 30px 40px;
+  @media (max-width: 500px) {
+  padding: 0px 0px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  @media(min-width: 501px) and (max-width: 766px) {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  padding: 0px 0px;
+  }
+  @media(min-width: 767px) and (max-width: 991px) {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  padding: 0px 0px;
+  }
   .single-card {
     margin-bottom: 12px;
-    padding: 15px;
+    /* padding: 15px; */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border-radius: 12px;
     display: grid;
@@ -72,15 +84,30 @@ const MainCard = styled.div`
       }
     }
     h4 {
-      color: var(--green-color);
+      color: var(--white-color);
+      @media(max-width: 500px) {
+        font-size: 14px;
+        font-weight: 400;
+        
+      }
     }
   }
 `;
 
 const NadaSection = styled.div`
   padding: 20px 70px;
+  .section-title-landing-page {
+    @media (max-width: 500px) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
   .nada-fav-tubes {
     margin-top: 45px;
+    .card-details {
+      padding: 8px 14px;
+    background: #009688;
+    }
   }
   .nada-cards {
     .slider-title {
@@ -322,7 +349,7 @@ export default function Simp() {
           </MainCard>
         </div>
       </NadaSection>
-      <NadaSection>
+      {/* <NadaSection>
         <div className="nada-stickers">
           <div className="sticker">
             <img src="/assets/images/nada-stickers/st-01.png" />
@@ -337,7 +364,7 @@ export default function Simp() {
             <img src="/assets/images/nada-stickers/st-04.png" />
           </div>
         </div>
-      </NadaSection>
+      </NadaSection> */}
     <Footer />
       {/* <NadaSection>
         <h2>0.39</h2>

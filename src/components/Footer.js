@@ -7,9 +7,10 @@ const FooterStyles = styled.footer`
     background-color: #11314a;
     margin: 0 auto;
     text-align: center;
-    padding: 12px 0px;
+    padding: 9px 0px;
     
     p{
+        font-size: 10px;
         color: var(--white-color)
     }
     
