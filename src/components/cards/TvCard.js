@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const MainCard = styled.div`
+  -webkit-box-shadow: 3px 7px 5px 0px rgba(191, 153, 191, 1);
+  -moz-box-shadow: 3px 7px 5px 0px rgba(191, 153, 191, 1);
+  box-shadow: 3px 7px 5px 0px rgba(191, 153, 191, 1);
   div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
@@ -22,6 +25,7 @@ const MainCard = styled.div`
         text-align: center;
         color: var(--white-color);
         letter-spacing: 0.5px;
+        padding: 7px 0px;
       }
     }
   }
@@ -53,27 +57,27 @@ const fadeIn = {
 export default function TVCard({ tv }) {
   return (
     <MainCard>
-      <a>
-        <img
-          src={`https://image.tmdb.org/t/p/original${tv.poster_path}`}
-          width={90}
-          height={90}
-          alt={tv.original_title || tv.original_name}
-        />
-      </a>
-      <motion.div
-        key={tv.original_name}
-        variants={fadeIn}
-        initial="initial"
-        animate="animate"
-        exit={{ opacity: 0 }}
-      >
-        <Link to={`/tv/${tv.id}`}>
+      <Link to={`/tv/${tv.id}`}>
+        <a>
+          <img
+            src={`https://image.tmdb.org/t/p/original${tv.poster_path}`}
+            width={90}
+            height={90}
+            alt={tv.original_title || tv.original_name}
+          />
+        </a>
+        <motion.div
+          key={tv.original_name}
+          variants={fadeIn}
+          initial="initial"
+          animate="animate"
+          exit={{ opacity: 0 }}
+        >
           <a>
             <h4>{tv.original_name}</h4>
           </a>
-        </Link>
-      </motion.div>
+        </motion.div>
+      </Link>
     </MainCard>
   );
 }

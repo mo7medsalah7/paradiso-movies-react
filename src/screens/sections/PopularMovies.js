@@ -34,7 +34,7 @@ export default function PopularMovies() {
     <PopularContainer className="section-landing-page">
       <h2 className="section-title-landing-page">Popular Movies..?</h2>
       <div className="movies-list">
-        {data.results.slice(1, 7).map((movie) => {
+        {data.results.slice(1, 5).map((movie) => {
           return <FilmCard key={movie.id} movie={movie}></FilmCard>;
         })}
       </div>

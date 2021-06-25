@@ -36,7 +36,7 @@ export default function PopularSeries() {
     <PopularContainer className="section-landing-page">
       <h2 className="section-title-landing-page">Popular Series..?</h2>
       <div className="movies-list">
-        {data.results.slice(1, 7).map((tv) => {
+        {data.results.slice(1, 5).map((tv) => {
           return <TVCard key={tv.id} tv={tv} />;
         })}
       </div>
