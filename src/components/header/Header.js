@@ -31,6 +31,12 @@ const InnerInformation = styled.div`
   padding: 0px 100px;
   @media (max-width: 776px) {
     padding: 0px 20px;
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.2rem !important;
+    }
   }
   @media (max-width: 922px) {
     padding: 0px 50px;
@@ -41,6 +47,7 @@ const InnerInformation = styled.div`
       letter-spacing: 0.6px;
       font-weight: 600;
       border-bottom: 3px solid #fff;
+      margin-bottom: 0.8rem;
     }
     p {
       color: rgba(255, 255, 255, 0.7);
@@ -64,7 +71,6 @@ const InnerInformation = styled.div`
       @media (min-width: 300px) and (max-width: 776px) {
         font-size: 8px;
         letter-spacing: 0px;
-
       }
       width: 100%;
       display: flex;
@@ -81,7 +87,6 @@ const InnerInformation = styled.div`
     input[type="submit"] {
       @media (min-width: 300px) and (max-width: 776px) {
         padding: 0px 8px;
-
       }
       display: inline-flex;
       justify-content: center;

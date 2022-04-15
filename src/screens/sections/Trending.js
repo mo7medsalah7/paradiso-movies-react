@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import FilmCard from "../../components/cards/FilmCard";
-import useTrendingDaily from "../../hooks/trending/useTrendingDaily"
-import useTrendingWeekly from '../../hooks/trending/useTrendingWeekly';
+import useTrendingDaily from "../../hooks/trending/useTrendingDaily";
+import useTrendingWeekly from "../../hooks/trending/useTrendingWeekly";
 
 const TrendingContainer = styled.div`
   span.hot-icon {
@@ -61,11 +61,20 @@ const TrendingContainer = styled.div`
 `;
 
 export default function Trending() {
-  
-  const { isLoading:daily_loading, isError: daily_error, data: daily_results, error } = useTrendingDaily();
-  const { isLoading: weekly_loading, isError: weekly_error, data: weekly_results } = useTrendingWeekly();
-  
-    console.log("day_data", daily_results)
+  const {
+    isLoading: daily_loading,
+    isError: daily_error,
+    data: daily_results,
+    error,
+  } = useTrendingDaily();
+
+  const {
+    isLoading: weekly_loading,
+    isError: weekly_error,
+    data: weekly_results,
+  } = useTrendingWeekly();
+
+  console.log("day_data", daily_results);
   const [trendingResults, setTrendingResults] = useState(daily_results);
   const [clicked, setBtnClicked] = useState(true);
 
@@ -80,12 +89,12 @@ export default function Trending() {
     console.log(mode);
     return trendingResults;
   }
-  if(daily_loading || weekly_loading) {
-    console.log("loadingggg")
+  if (daily_loading || weekly_loading) {
+    console.log("loadingggg");
   }
 
-  if(daily_error || weekly_error) {
-    console.log("errrorrr")
+  if (daily_error || weekly_error) {
+    console.log("errrorrr");
   }
   return (
     <div>

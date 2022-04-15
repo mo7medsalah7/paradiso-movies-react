@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import FilmCard from "./cards/FilmCard";
-import useTrendingDaily from './../hooks/trending/useTrendingDaily';
-import useTrendingWeekly from './../hooks/trending/useTrendingWeekly';
+import useTrendingDaily from "./../hooks/trending/useTrendingDaily";
+import useTrendingWeekly from "./../hooks/trending/useTrendingWeekly";
 
 const TrendingContainer = styled.div`
   span.hot-icon {
@@ -61,10 +61,18 @@ const TrendingContainer = styled.div`
 `;
 
 export default function Trending() {
-  
-  const { isLoading:daily_loading, isError: daily_error, data: daily_results, error } = useTrendingDaily();
-  const { isLoading: weekly_loading, isError: weekly_error, data: weekly_results } = useTrendingWeekly();
-  
+  const {
+    isLoading: daily_loading,
+    isError: daily_error,
+    data: daily_results,
+    error,
+  } = useTrendingDaily();
+  const {
+    isLoading: weekly_loading,
+    isError: weekly_error,
+    data: weekly_results,
+  } = useTrendingWeekly();
+
   const [trendingResults, setTrendingResults] = useState(daily_results);
   const [clicked, setBtnClicked] = useState(true);
 
